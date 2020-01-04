@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<style>
+			body {
+				max-width: 100%;
+                text-align: center;
+			}
+		</style>
+	</head>
+<body>
+	<h1>Day</h1>
+
+	<!--#include virtual="/app/adress"-->
+
+	<!--#include virtual="/app/menu"-->
+
+	<!--#include virtual="/app/cities"-->
+
+
+<h3>
+        <div id="ad"/>
+    </div>  
+	</h3>
+</body>
+<template id="template">
+  <div>
+        <span>{{Day.place}}</span><br>
+        <span>{{Day.name}}</span>
+  </div>
+</template>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
+<script>
+	var template = document.getElementById('template').innerHTML;
+	var renderDay = Handlebars.compile(template);
+	document.getElementById('ad').innerHTML = renderDat({Day: {"name": "Get your new Christmas tree now", "place": "North American"}});
+	</script>
+</html>
