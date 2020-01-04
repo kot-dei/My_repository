@@ -3,15 +3,16 @@ const router = express.Router();
 const faker = require('faker');
 
 /* GET cities page. */
-router.get('/cities', (req, res) => {
-   var cities = [ 
-       { "name": "Minsk"}, 
-  	   { "name": "San Francisco"},
-       { "name": "Seul"}
+router.get('/place', (req, res) => {
+   var place = [ 
+       { "place": "day"}, 
+       { "place": "street" },
+       { "place": "weather" },
+       { "place": "city" }
   	];
 
-    res.render('cities', 
-  			{ "cities": cities}
+    res.render('place', 
+  			{ "place": place}
   	);
 });
 
