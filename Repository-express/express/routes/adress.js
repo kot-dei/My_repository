@@ -13,7 +13,10 @@ router.get('/', (req, res) => {
   	   },
        { "city": faker.address.city(), 
   	   	 "street": faker.address.streetAddress()
-  	   }
+  	   },
+       { "city": faker.address.city(), 
+         "street": faker.address.streetAddress()
+       }
   	];
 });
 module.exports = router;
