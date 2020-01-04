@@ -6,10 +6,13 @@ const faker = require('faker');
 router.get('/menu', (req, res) => {
     res.render('menu', 
         { "menu": [ 
-       { "place": "day"}, 
-       { "place": "street" },
-       { "place": "weather" },
-       { "place": "city" }
+       { "day": "Monday"}, 
+       { "day": "Thursday"}, 
+       { "day": "Wendssday"}, 
+       { "day": "Tuesday"}, 
+       { "day": "Friday"}, 
+       { "day": "Saturday"}, 
+       { "day": "Sunday"}
           ]
         }
     );
