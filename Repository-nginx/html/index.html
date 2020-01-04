@@ -10,6 +10,23 @@
 <body>
 	<h1>Day</h1>
 
+	<h2>Events</h2>
+
+	<table border="1" align="center" bordercolor="black">
+    	<tr>
+    		<td width="100" height="100" align="center">Name</td>
+    		<td width="100" height="100" align="center">Place</td>
+    		<td width="100" height="100" align="center">Author</td>
+    		<td width="100" height="100" align="center">Content</td>
+    	</tr>
+    	<tr>
+    		<td width="100" height="100" align="center">Woman</td>
+    		<td width="100" height="100" align="center">Britain</td>
+    		<td width="100" height="100" align="center">Joshua Reinolds</td>
+    		<td width="100" height="100" align="center">Holidays Events</td>
+    	</tr>
+    </table>
+
 	<!--#include virtual="/app/adress"-->
 
 	<!--#include virtual="/app/menu"-->
@@ -25,13 +42,29 @@
 <template id="template">
   <div>
         <span>{{Day.place}}</span><br>
-        <span>{{Day.name}}</span>
+        <span>{{Day.name}}</span><br>
+        <span>{{Day.author}}</span>
+        <span>{{Day.Content}}</span>
   </div>
+      <table border="1" align="center" bordercolor="black">
+    	<tr>
+    		<td width="100" height="100" align="center">Name</td>
+    		<td width="100" height="100" align="center">Place</td>
+    		<td width="100" height="100" align="center">Author</td>
+    		<td width="100" height="100" align="center">Content</td>
+    	</tr>
+    	<tr>
+    		<td width="100" height="100" align="center">Woman</td>
+    		<td width="100" height="100" align="center">Britain</td>
+    		<td width="100" height="100" align="center">Joshua Reinolds</td>
+    		<td width="100" height="100" align="center">Holidays Events</td>
+    	</tr>
+    </table>
 </template>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.4.2/handlebars.js"></script>
 <script>
 	var template = document.getElementById('template').innerHTML;
 	var renderDay = Handlebars.compile(template);
-	document.getElementById('ad').innerHTML = renderDat({Day: {"name": "Get your new Christmas tree now", "place": "North American"}});
+	document.getElementById('ad').innerHTML = renderDat({Day: {"name": "Woman", "place": "Britain", "author": "Joshua Reinolds", "Content": "Holidays Events"}});
 	</script>
 </html>
